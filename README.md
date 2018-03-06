@@ -1,5 +1,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+_This repository hasn't been published yet, I need some help to expose the native component to JS_
+
 React Native implementation of [ReactDOM portals](https://reactjs.org/docs/portals.html) using a declarative API.
 
 This library makes possible the _teleportation_ of views from a place to another one.
@@ -54,3 +56,7 @@ When the `shouldMove` state will change to something truthy, the `View` and the 
 previously.
 
 If the value of the `destination` prop is set to `null`, the `View` and `Text` are restituted to their original place.
+
+---
+
+Built with ❤️ at [M6 Web](http://tech.m6web.fr/)
