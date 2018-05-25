@@ -2,7 +2,7 @@
 
 _This repository hasn't been published yet, I need some help to expose the native component to JS_
 
-[Here's the story _why_ we've built this library](http://tech.m6web.fr/)
+[Here's the story _why_ we've built this library](https://t.co/QVGbfGuLG3)
 
 React Native implementation of [ReactDOM portals](https://reactjs.org/docs/portals.html) using a declarative API.
 
