@@ -2,6 +2,8 @@
 
 _This repository hasn't been published yet, I need some help to expose the native component to JS_
 
+[Here's the story _why_ we've built this library](http://tech.m6web.fr/)
+
 React Native implementation of [ReactDOM portals](https://reactjs.org/docs/portals.html) using a declarative API.
 
 This library makes possible the _teleportation_ of views from a place to another one.
