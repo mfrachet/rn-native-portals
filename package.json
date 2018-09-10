@@ -1,0 +1,14 @@
+{
+  "name": "rn-native-portals",
+  "version": "0.0.1",
+  "description": "Native side portals for React Native",
+  "main": "index.js",
+  "keywords": [
+    "react-native"
+  ],
+  "author": "Marvin Frachet <marvin.frachet@gmail.com>",
+  "license": "MIT",
+  "peerDependencies": {
+    "react-native": "^0.41.2"
+  }
+}
