@@ -1,6 +1,28 @@
+import PropTypes from "prop-types";
+import { requireNativeComponent, ViewPropTypes } from "react-native";
 
-import { NativeModules } from 'react-native';
+const portalOrigin = {
+  name: "PortalOrigin",
+  propTypes: {
+    name: PropTypes.string,
+    ...ViewPropTypes
+  }
+};
 
-const { RNNativePortals } = NativeModules;
+const portalDestination = {
+  name: "PortalDestination",
+  propTypes: {
+    destination: PropTypes.string,
+    ...ViewPropTypes
+  }
+};
 
-export default RNNativePortals;
+export const PortalOrigin = requireNativeComponent(
+  "RCTPortalOrigin",
+  portalOrigin
+);
+
+export const PortalDestination = requireNativeComponent(
+  "RCTPortalDestination",
+  portalDestination
+);
