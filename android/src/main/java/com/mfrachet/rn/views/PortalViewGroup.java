@@ -5,13 +5,13 @@ import android.view.View;
 import com.facebook.react.uimanager.ThemedReactContext;
 import com.facebook.react.views.view.ReactViewGroup;
 
-public class ReparentableViewGroup extends ReactViewGroup {
+public class PortalViewGroup extends ReactViewGroup {
 
-    public ReparentableViewGroup(ThemedReactContext ctx) {
+    public PortalViewGroup(ThemedReactContext ctx) {
         super(ctx);
     }
 
-    public void moveTo(ReparentableViewGroup destination) {
+    public void moveTo(PortalViewGroup destination) {
         destination.removeAllViews();
 
 

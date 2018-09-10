@@ -1,22 +1,22 @@
 package com.mfrachet.rn.views;
 
 import com.facebook.react.uimanager.ThemedReactContext;
-import com.mfrachet.rn.utils.ReparentableRegistry;
+import com.mfrachet.rn.utils.PortalRegistry;
 
 
-public class ReparentableDestinationGroup extends ReparentableViewGroup {
+public class PortalDestinationGroup extends PortalViewGroup {
     private String mName;
-    private ReparentableOriginGroup mLastOrigin;
-    private ReparentableRegistry mRegistry;
+    private PortalOriginGroup mLastOrigin;
+    private PortalRegistry mRegistry;
 
-    public ReparentableDestinationGroup(ThemedReactContext ctx, ReparentableRegistry registry) {
+    public PortalDestinationGroup(ThemedReactContext ctx, PortalRegistry registry) {
         super(ctx);
         mRegistry = registry;
     }
 
     //Business part
     private void moveIfNeeded() {
-        ReparentableOriginGroup potentialOrigin = mRegistry.getOrigin(mName);
+        PortalOriginGroup potentialOrigin = mRegistry.getOrigin(mName);
         if (potentialOrigin != null) {
             potentialOrigin.moveTo(this);
             prepareNextRestitution(potentialOrigin);
@@ -31,7 +31,7 @@ public class ReparentableDestinationGroup extends ReparentableViewGroup {
         }
     }
 
-    public void prepareNextRestitution(ReparentableOriginGroup origin) {
+    public void prepareNextRestitution(PortalOriginGroup origin) {
         mLastOrigin = origin;
         origin.setLastDestination(this);
     }
@@ -47,7 +47,7 @@ public class ReparentableDestinationGroup extends ReparentableViewGroup {
         moveIfNeeded();
     }
 
-    public ReparentableOriginGroup getLastOrigin() {
+    public PortalOriginGroup getLastOrigin() {
         return mLastOrigin;
     }
 }
