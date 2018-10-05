@@ -1,45 +1,64 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-# react-native-native-portals
+_This repository hasn't been published yet, I need some help to expose the native component to JS. The current status should be working on android like described in https://github.com/mfrachet/rn-reparentable/issues/1/#issuecomment-419985453_
 
-## Getting started
+[Here's the story _why_ we've built this library](https://t.co/QVGbfGuLG3)
 
-`$ npm install react-native-native-portals --save`
+React Native implementation of [ReactDOM portals](https://reactjs.org/docs/portals.html) using a declarative API.
 
-### Mostly automatic installation
+This library makes possible the _teleportation_ of views from a place to another one.
 
-`$ react-native link react-native-native-portals`
+---
 
-### Manual installation
+# Content
 
+- <a href="#usage">How to use it ?</a>
+- [Understanding the concept](./docs/CONCEPT.md)
 
-#### iOS
+<h1 name="#usage">Usage</h1>
 
-1. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
-2. Go to `node_modules` ➜ `react-native-native-portals` and add `RNNativePortals.xcodeproj`
-3. In XCode, in the project navigator, select your project. Add `libRNNativePortals.a` to your project's `Build Phases` ➜ `Link Binary With Libraries`
-4. Run your project (`Cmd+R`)<
+### Installation
 
-#### Android
-
-1. Open up `android/app/src/main/java/[...]/MainActivity.java`
-  - Add `import com.mfrachet.rn.RNNativePortalsPackage;` to the imports at the top of the file
-  - Add `new RNNativePortalsPackage()` to the list returned by the `getPackages()` method
-2. Append the following lines to `android/settings.gradle`:
-  	```
-  	include ':react-native-native-portals'
-  	project(':react-native-native-portals').projectDir = new File(rootProject.projectDir, 	'../node_modules/react-native-native-portals/android')
-  	```
-3. Insert the following lines inside the dependencies block in `android/app/build.gradle`:
-  	```
-      compile project(':react-native-native-portals')
-  	```
-
-
-## Usage
-```javascript
-import RNNativePortals from 'react-native-native-portals';
-
-// TODO: What to do with the module?
-RNNativePortals;
 ```
-  
+$ yarn add rn-reparentable
+$ react-native link
+```
+
+### In your code
+
+Somewhere high in your component tree, add a `ReparentableDestination` (a portal destination):
+
+```javascript
+import { ReparentableDestination } from 'rn-reparentable';
+
+render() {
+	return (
+		<ReparentableDestination name="targetOfTeleportation" />
+	);
+}
+```
+
+Somewhere else in the tree, add a `ReparentableOrigin` (a portal origin):
+
+```javascript
+import { ReparentableOrigin } from 'rn-reparentable';
+
+render() {
+	return (
+		<ReparentableOrigin destination={ this.state.shouldMove ? 'targetOfTeleportation' : null }>
+			<View>
+				<Text>Hello world</Text>
+			</View>
+		</ReparentableOrigin>
+	);
+}
+```
+
+When the `shouldMove` state will change to something truthy, the `View` and the `Text` components will be moved inside the `ReparentableDestination` component set
+previously.
+
+If the value of the `destination` prop is set to `null`, the `View` and `Text` are restituted to their original place.
+
+---
+
+Built with ❤️ at [M6 Web](http://tech.m6web.fr/)
