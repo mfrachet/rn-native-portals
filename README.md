@@ -1,6 +1,6 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-_This repository hasn't been published yet, I need some help to expose the native component to JS_
+_This repository hasn't been published yet, I need some help to expose the native component to JS. The current status should be working on android like described in https://github.com/mfrachet/rn-reparentable/issues/1/#issuecomment-419985453_
 
 [Here's the story _why_ we've built this library](https://t.co/QVGbfGuLG3)
 
@@ -12,8 +12,8 @@ This library makes possible the _teleportation_ of views from a place to another
 
 # Content
 
-* <a href="#usage">How to use it ?</a>
-* [Understanding the concept](./docs/CONCEPT.md)
+- <a href="#usage">How to use it ?</a>
+- [Understanding the concept](./docs/CONCEPT.md)
 
 <h1 name="#usage">Usage</h1>
 
