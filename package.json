@@ -2,6 +2,7 @@
   "name": "rn-native-portals",
   "version": "0.0.1",
   "description": "Native side portals for React Native",
+  "homepage": "https://github.com/mfrachet/rn-native-portals#readme",
   "main": "index.js",
   "keywords": [
     "react-native"
