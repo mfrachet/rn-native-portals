@@ -21,7 +21,9 @@ This library makes possible the _teleportation_ of views from a place to another
 
 ```
 $ yarn add mfrachet/rn-native-portals
-$ react-native link
+
+# Using iOS
+$ cd ios && pod install
 ```
 
 ### In your code
