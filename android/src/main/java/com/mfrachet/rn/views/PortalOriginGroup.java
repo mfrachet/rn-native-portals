@@ -16,7 +16,11 @@ public class PortalOriginGroup extends PortalViewGroup {
 
     // Buiness part
     public void restituteIfNeeded(String destinationName) {
-        if (destinationName != null || mLastDestination == null || mLastDestination.getLastOrigin() == null) {
+        if (mLastDestination == null || mLastDestination.getLastOrigin() == null) {
+            return;
+        }
+        
+        if (destinationName == mLastDestination.getName()) {
             return;
         }
 

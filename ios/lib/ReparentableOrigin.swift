@@ -18,7 +18,7 @@ class PortalOrigin: UIView, PortalView {
   }
   
   func restituteIfNeeded(destinationName: NSString) {
-    if (destinationName == "" && lastDestination?.lastOrigin == self) {
+    if (destinationName != lastDestination?.name && lastDestination?.lastOrigin == self) {
       lastDestination?.restitute()
     }
   }
