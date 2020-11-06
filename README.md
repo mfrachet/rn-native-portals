@@ -1,6 +1,6 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-_This repository hasn't been published yet, I need some help to expose the native component to JS. The current status should be working on android like described in https://github.com/mfrachet/rn-native-portals/issues/1#issuecomment-419985453_
+**This project is not under active development. Feel free to fork it, to take inspiration, create a copy or anything that make you feel productive.**
 
 [Here's the story _why_ we've built this library](https://t.co/QVGbfGuLG3)
 
