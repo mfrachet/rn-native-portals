@@ -2,7 +2,7 @@
 
 **This project is not under active development. Feel free to fork it, to take inspiration, create a copy or anything that make you feel productive.**
 
-[Here's the story _why_ we've built this library](https://t.co/QVGbfGuLG3)
+[Here's the story _why_ we've built this library](https://tech.bedrockstreaming.com/6play/how-a-fullscreen-video-mode-ended-up-implementing-react-native-portals/)
 
 React Native implementation of [ReactDOM portals](https://reactjs.org/docs/portals.html) using a declarative API.
 
