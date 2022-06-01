@@ -25,6 +25,16 @@ public class PortalOriginGroup extends PortalViewGroup {
         }
     }
 
+    @Override
+    public void addView(View child, int index, ViewGroup.LayoutParams params) {
+        PortalDestinationGroup realDestination = mRegistry.getDestination(mDestination);
+        if (realDestination != null) {
+            realDestination.addView(child, index, params);
+        } else {
+            super.addView(child, index, params);
+        }
+    }
+
     public void move() {
         PortalDestinationGroup realDestination = mRegistry.getDestination(mDestination);
         if (realDestination != null) {
