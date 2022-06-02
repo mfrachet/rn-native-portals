@@ -1,6 +1,6 @@
 package com.mfrachet.rn.views;
-
-
+import android.view.View;
+import android.view.ViewGroup;
 import com.facebook.react.uimanager.ThemedReactContext;
 import com.mfrachet.rn.utils.PortalRegistry;
 
